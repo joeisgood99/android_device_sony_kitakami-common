@@ -1,0 +1,16 @@
+# mount point    fstype    device            [device2]   fstype2
+/boot           emmc    /dev/block/bootdevice/by-name/boot
+/system         ext4    /dev/block/bootdevice/by-name/system
+/cache          ext4    /dev/block/bootdevice/by-name/cache
+/data           ext4    /dev/block/bootdevice/by-name/userdata                         	length=-16384
+
+#/external_sd   vfat    /devices/soc.0/f98a4900.sdhci/mmc_host                        	flags=display="Micro SDcard";storage;wipeingui;removable
+
+/sdcard1	auto	/devives/msm_sdcc.2/mmc_host				       	flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        vfat     /dev/block/sda1						flags=display="USB OTG";storage;wipeingui;removable
+
+#/external_sd    vfat     /dev/block/mmcblk1p1						flags=display="Micro SDcard";storage;wipeingui;removable
+
+
+#/external_sd	vfat	/devices/soc.0/f98a4900.sdhci/mmc_host/mmc* auto		flags=display="Micro SDcard";storage;wipeingui;removable	
+#/usb-otg	vfat	/devices/soc.0/*/xhci-hcd.0.auto            auto		flags=display="USB OTG";storage;wipeingui;removable	
